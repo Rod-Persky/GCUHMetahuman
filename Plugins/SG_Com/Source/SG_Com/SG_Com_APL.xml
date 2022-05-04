@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- steps to add to build additions -->
+<root xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- init section is always evaluated once per architecture -->
+    <init>
+      <log text="SG_Com APL init"/>
+    </init>
+
+    <!-- optional files or directories to copy to Intermediate/Android/APK -->
+    <resourceCopies>
+    <log text="SG_Com APL copying files for $S(Architecture)"/>
+      <copyFile src="$S(PluginDir)/../../Binaries/Android/$S(Architecture)/libSG_Com.so"
+                dst="$S(BuildDir)/libs/$S(Architecture)/libSG_Com.so" />
+    </resourceCopies>
+
+    <!-- optional libraries to load in GameActivity.java before libUE4.so -->
+    <soLoadLibrary>
+    <log text="SG_Com APL adding loadLibrary references"/>
+    <loadLibrary name="SG_Com" failmsg="Failed to load SG_Com library" />
+    </soLoadLibrary>
+</root>

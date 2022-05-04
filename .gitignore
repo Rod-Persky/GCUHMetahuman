@@ -1,0 +1,27 @@
+.vs/
+.vscode/
+export/
+export_debug/
+UE4Editor-SG_Com-0*.pdb
+*DebugGame.dll
+*DebugGame.pdb
+*DebugGame.modules
+
+# UE temporary items
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+
+# Always keep the SG_Com
+!Plugins/SG_Com/Binaries
+!Plugins/SG_Com/Binaries/*
+
+
+# We want to ignore the audio directory (for now)
+Content/Resources/Audio
+
+# Solution files appear to be setup for a specific machine
+*.sln
+
